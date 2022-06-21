@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<link href="css/homepage.css" rel="stylesheet">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment ="footer" class="container my-5">
+    <div class="container mb-5">
+        <footer id="footer" class="footer-1">
+            <div class="main-footer widgets-dark typo-light">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget subscribe no-box">
+                                <h5 class="widget-title">Kuih Kekasih<span></span></h5>
+                                <p>Only the best kuihs in town. Nay, in Singapore. Nay, the whole world </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Links<span></span></h5>
+                                <ul>
+                                    <li>
+                                        <div><a th:href="@{Homepage}">Home</a></div>
+                                    </li>
+                                    <li>
+                                        <div><a th:href="@{aboutus}">About Us</a></div>
+                                    </li>
+                                    <li>
+                                        <div><a th:href="@{shop}">Products</a></div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Location<span></span></h5>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7863699832205!2d103.82401832183622!3d1.3031662825421022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c299c1c32b%3A0x2d604c69e453ae98!2sSeason&#39;s%20Park%20Condo!5e0!3m2!1sen!2ssg!4v1655694140409!5m2!1sen!2ssg"
+                                        width="150" height="150" style="border:0;"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Contact Us<span></span></h5>
+                                <p>For more updates</p>
+                                <div class="emailfield">
+                                    <input type="text" name="email" value="Email">
+                                    <input name="uri" type="hidden" value="arabiantheme">
+                                    <input name="loc" type="hidden" value="en_US">
+                                    <input class="submitbutton ripplelink" type="submit" value="Subscribe">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>

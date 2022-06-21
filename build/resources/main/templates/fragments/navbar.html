@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kekasih</title>
+</head>
+<body>
+
+<link rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+<link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' />
+
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-light py-3 parallax">
+    <div class="container navback py-5">
+        <a class="navbar-brand" href="#">Kekasih</a>
+        <form class="d-flex">
+            <div class="input-group">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                       aria-describedby="search-addon" />
+                <button type="button" class="btn btn-outline-primary">search</button>
+            </div>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{Homepage}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{aboutus}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{shop}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{login}">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{addproduct}">Product Form</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
