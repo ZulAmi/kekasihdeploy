@@ -14,7 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Configuration
-@EnableWebMvc
 public class MvcConfig implements WebMvcConfigurer {
 
     //because we have implemented WebMvcConfigurer, so we can do out own implementation of the method on the WebMvcConfigurer interface

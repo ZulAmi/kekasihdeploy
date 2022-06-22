@@ -124,15 +124,6 @@ h5 {
 
 /* End Card */
 
-/*Star Rating */
-
-.rating__icon--star {
-    color: orange !important;
-    background-color: transparent !important;
-    padding: 2px !important;
-}
-
-/*End of Rating/
 
 /* Main Footer */
 #footer .main-footer {
