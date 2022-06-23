@@ -2,20 +2,20 @@
 //display the name, description, imageUrl, price, ..., ...,.....,....
 
 
-const createHTMLList = (index, name, description, imageURL) =>
+const createHTMLList = (index, name, description, imageURL, price) =>
 
 `<div class="col-lg-6">
     <div class="card mb-3">
         <div class="row g-0">
-            <div class="col-md-4">
-                <img src="${imageURL}"
+            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                <img src=${imageURL}
                     class="card-img-top" alt="...">
             </div>
             <div class="container col-md-6 ">
                 <div class="card-body row align-items-center">
                     <h5 class="card-title">${name}</h5>
                     <p class="card-text">${description}</p>
-                    <a id="${index}" href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal">More</a>
+                    <a id="${index}" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">More</a>
                     </p>
                 </div>
             </div>
@@ -30,6 +30,7 @@ function displayProductDetails(item)
     document.querySelector("#modalName").innerText = item.name;
     document.querySelector("#modalImg").src = item.imageUrl;
     document.querySelector("#modalPrice").innerText = item.price;
+    document.querySelector("#modalDesc").innerText = item.description;
 
 }
 
@@ -40,11 +41,11 @@ class ProductsController
     {
         //Configuration of local development and prod URL
 
-        this.domainURL_Dev = "http://localhost:8080";
+        this.domainURL_Dev = "http://localhost:8090";
         this.domainURL_Prod = "https://kekasih.herokuapp.com/";
 
-        this.addItemAPI = this.domainURL_Prod + "/item/add";
-        this.allItemAPI = this.domainURL_Prod + "/item/all";
+        this.addItemAPI = this.domainURL_Dev + "/item/add";
+        this.allItemAPI = this.domainURL_Dev + "/item/all";
 
         this._items = [];       //create an array to store the details of product items
     }
@@ -60,7 +61,7 @@ class ProductsController
                 formData.append('price', price);
                 formData.append('imagefile',imageObject);
 
-                //GET method is a default. so in display item we didnt state
+                //GET method
 
                fetch(this.addItemAPI, {
                      method: 'POST',
@@ -89,6 +90,8 @@ class ProductsController
     {
         let productHTMLList = [];
 
+         console.log("inside " + this._items);
+
         for (let i=0; i<this._items.length; i++)
         {
             const item = this._items[i];            //assign the individual item to the variable
@@ -96,10 +99,12 @@ class ProductsController
             const productHTML = createHTMLList(i, item.name, item.description, item.imageUrl);
 
             productHTMLList.push(productHTML);
+
         }
 
         //Join all the elements/items in my productHTMLList array into one string, and seperate by a break
         const pHTML = productHTMLList.join('\n');
+
         document.querySelector('#row1').innerHTML = pHTML;
 
         //addEventListener - click
@@ -115,7 +120,7 @@ class ProductsController
 //This method if to fetch data from database
     displayItem()
     {
-       {
+
             let productController = this;
             productController._items = [];
 
@@ -142,9 +147,7 @@ class ProductsController
                 })
                 .catch(function(error) {
                     console.log(error);
-                });
-
-    }
+                })
 
     }
 }   //End of ProductsController class
