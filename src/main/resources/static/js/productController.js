@@ -41,7 +41,7 @@ class ProductsController
     {
 
             this.domainURL_Dev = "http://localhost:8090";
-            this.domainURL_Prod = "https://kekasih.herokuapp.com/";
+            this.domainURL_Prod = "https://kekasih.herokuapp.com";
 
             this.addItemAPI = this.domainURL_Prod + "/item/add";
             this.allItemAPI = this.domainURL_Prod + "/item/all";
