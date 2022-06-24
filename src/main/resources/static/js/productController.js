@@ -89,7 +89,6 @@ class ProductsController
     {
         let productHTMLList = [];
 
-         console.log("inside " + this._items);
 
         for (let i=0; i<this._items.length; i++)
         {
@@ -101,12 +100,12 @@ class ProductsController
 
         }
 
-        //Join all the elements/items in my productHTMLList array into one string, and seperate by a break
+
         const pHTML = productHTMLList.join('\n');
 
         document.querySelector('#row1').innerHTML = pHTML;
 
-        //addEventListener - click
+
         for (let i=0; i<this._items.length; i++)
         {
             const item = this._items[i];
@@ -123,7 +122,7 @@ class ProductsController
             let productController = this;
             productController._items = [];
 
-            //fetch data from database using the REST API endpoint from Spring Boot
+
             fetch(this.allItemAPI)
                 .then((resp) => resp.json())
                 .then(function(data) {
