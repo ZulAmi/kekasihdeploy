@@ -40,13 +40,6 @@ class ProductsController
     constructor()
     {
 
-
-        this.domainURL_Dev = "http://localhost:8090";
-        this.domainURL_Prod = "https://kekasih.herokuapp.com/";
-
-        this.addItemAPI = this.domainURL_Dev + "/item/add";
-        this.allItemAPI = this.domainURL_Dev + "/item/all";
-
         this._items = [];
     }
 
@@ -63,7 +56,7 @@ class ProductsController
 
                 //GET method
 
-               fetch(this.addItemAPI, {
+               fetch('http://localhost:8090/item/add', {
                      method: 'POST',
                      body: formData
                      })
@@ -125,7 +118,7 @@ class ProductsController
             productController._items = [];
 
             //fetch data from database using the REST API endpoint from Spring Boot
-            fetch(this.allItemAPI)
+            fetch('http://127.0.0.1:8090/item/all')
                 .then((resp) => resp.json())
                 .then(function(data) {
                     console.log("2. receive data")

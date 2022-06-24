@@ -45,7 +45,7 @@ public class WebSecurityConfig {
 
         //if user successfully login, user will be directed to the productform.html
         http.formLogin()
-                .defaultSuccessUrl("/productform");
+                .defaultSuccessUrl("/addproduct");
 
         //if user successfully logout, user will be directed to the index.html
         http.logout()
