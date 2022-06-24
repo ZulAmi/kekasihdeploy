@@ -39,18 +39,18 @@ class ProductsController
 {
     constructor()
     {
-        //Configuration of local development and prod URL
+
 
         this.domainURL_Dev = "http://localhost:8090";
         this.domainURL_Prod = "https://kekasih.herokuapp.com/";
 
-        this.addItemAPI = this.domainURL_Dev + "/item/add";
-        this.allItemAPI = this.domainURL_Dev + "/item/all";
+        this.addItemAPI = this.domainURL_Prod + "/item/add";
+        this.allItemAPI = this.domainURL_Prod + "/item/all";
 
-        this._items = [];       //create an array to store the details of product items
+        this._items = [];
     }
 
-    //method to add the items into the array
+
     addItem(name, description, imageUrl, price, imageObject)
     {
           var productController = this;
@@ -68,7 +68,7 @@ class ProductsController
                      body: formData
                      })
                      .then(function(response) {
-                         console.log(response.status); // Will show you the status
+                         console.log(response.status);
                          if (response.ok) {
                              alert("Successfully Added Product!")
                          }
