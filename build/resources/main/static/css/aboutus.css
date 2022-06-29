@@ -358,3 +358,60 @@ input.submitbutton.ripplelink {
 
 body {background-color:#ffffff;background-repeat:no-repeat;background-position:top center;background-attachment:fixed;}
     h1{text-align:center; sans-serif;color:#000000;background-color:#ffffff;}
+
+.button {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background: #949494;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight 500px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #626262;
+}
+
+.button:active {
+    background: #424242;
+}
+
+.button__text,
+.button__icon {
+
+   display:inline-flex;
+   align-items: center;
+   padding: 0 24px;
+   color: #fff;
+   height: 100%;
+}
+
+.button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.buttonweb3 {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background: #FE8801;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight 500px;
+    cursor: pointer;
+}
+
+.buttonweb3:hover {
+    background: #D47203;
+}
+
+.buttonweb3:active {
+    background: #9F5500;
+}

@@ -85,10 +85,22 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Add to cart
+                <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="button__text">Add to Cart</span>
+                    <span class="button__icon">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </span>
                 </button>
-                <button onclick="loginWeb3()"class="btn btn-dark">Purchase with MetaMask</button>
+
+
+                <button onclick="loginWeb3()"class="buttonweb3">
+                    <span class="button__text">Web3 Payment</span>
+                    <span class="button__icon">
+                        <ion-icon name="logo-bitcoin"></ion-icon>
+                    </span>
+                </button>
+
+
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Add to Cart"></button>
             </div>
         </div>
@@ -130,6 +142,8 @@
 
 <script src="js/productController.js"></script>
 <script src="js/productListing.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script>
 		Moralis.initialize("WlQajXco6ufSf5JU2N2FHKsXpi9P0KXWuOHX7Cg5");

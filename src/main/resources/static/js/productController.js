@@ -15,7 +15,15 @@ const createHTMLList = (index, name, description, imageURL, price) =>
                 <div class="card-body row align-items-center">
                     <h5 class="card-title">${name}</h5>
                     <p class="card-text">${description}</p>
-                    <a id="${index}" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">More</a>
+                    <a id="${index}" href="#">
+                        <button type="button" class="button"
+                            data-bs-toggle="modal" data-bs-target="#productModal">
+                            <span class="button__text">Shop Now</span>
+                            <span class="button__icon">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </span>
+                        </button>
+                    </a>
                     </p>
                 </div>
             </div>
