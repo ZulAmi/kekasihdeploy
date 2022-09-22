@@ -34,7 +34,8 @@ public class ItemServiceMySQLTest {
 
     @Test
     public void saveCallsItemsRepositorySave() {
-        itemService.save(itemMock);                                  Mockito.verify(itemRepository).save(itemMock);
+        itemService.save(itemMock);
+        Mockito.verify(itemRepository).save(itemMock);
     }
 
     @Test

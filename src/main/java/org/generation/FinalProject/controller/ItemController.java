@@ -66,5 +66,7 @@ public class ItemController {
         String fullPath = imageFolder + "/" + imageUrl;
         ItemDto itemDto = new ItemDto(name, description, fullPath, price);
         itemService.save(new Item(itemDto));
+
+
     }
 }
